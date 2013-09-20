@@ -51,11 +51,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/libMali.so:system/lib/libMali.so \
     $(LOCAL_PATH)/proprietary/lib/libUMP.so:system/lib/libUMP.so
 
-# EXTRAS
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/proprietary/bin/hdmid:system/bin/hdmid \
-    $(LOCAL_PATH)/proprietary/bin/hdmi_service_st:system/bin/hdmi_service_st
-
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/hw/audio.primary.DB8520H.so:system/lib/hw/audio.primary.DB8520H.so \
@@ -80,9 +75,7 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/proprietary/bin/bcm4334.hcd:system/bin/bcm4334.hcd \
-    $(LOCAL_PATH)/proprietary/bin/sdptool:system/bin/sdptool \
-    $(LOCAL_PATH)/proprietary/bin/btld:system/bin/btld
+    $(LOCAL_PATH)/proprietary/bin/bcm4334.hcd:system/bin/bcm4334.hcd
 
 # Wifi
 PRODUCT_COPY_FILES += \
