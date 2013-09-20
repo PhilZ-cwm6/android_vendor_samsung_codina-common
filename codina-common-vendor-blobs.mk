@@ -32,7 +32,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/siliconfile_sr030pc50.dat:system/usr/share/camera/config_file/siliconfile_sr030pc50.dat \
     $(LOCAL_PATH)/proprietary/lib/libsomxaacd.so:system/lib/libsomxaacd.so \
     $(LOCAL_PATH)/proprietary/lib/libsomxaace.so:system/lib/libsomxaace.so \
-    $(LOCAL_PATH)/proprietary/lib/libsomxac3d.so:system/lib/libsomxac3d.so \
     $(LOCAL_PATH)/proprietary/lib/libsomxamrd.so:system/lib/libsomxamrd.so \
     $(LOCAL_PATH)/proprietary/lib/libsomxcmn.so:system/lib/libsomxcmn.so \
     $(LOCAL_PATH)/proprietary/lib/libsomxcore.so:system/lib/libsomxcore.so \
@@ -82,8 +81,8 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/bin/bcm4334.hcd:system/bin/bcm4334.hcd \
-    $(LOCAL_PATH)/bin/sdptool:system/bin/sdptool \
-    $(LOCAL_PATH)/bin/btld:system/bin/btld
+    $(LOCAL_PATH)/proprietary/bin/sdptool:system/bin/sdptool \
+    $(LOCAL_PATH)/proprietary/bin/btld:system/bin/btld
 
 # Wifi
 PRODUCT_COPY_FILES += \
@@ -94,6 +93,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/bin/p2p_supplicant:system/bin/p2p_supplicant \
     $(LOCAL_PATH)/proprietary/etc/wifi/nvram_net.txt:system/etc/wifi/nvram_net.txt \
     $(LOCAL_PATH)/proprietary/etc/wifi/nvram_mfg.txt:system/etc/wifi/nvram_mfg.txt
+
+# DRM
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/lib/libwvdrm_L3.so:system/lib/libwvdrm_L3.so \
+    $(LOCAL_PATH)/proprietary/lib/libwvm.so:system/lib/libwvm.so \
+    $(LOCAL_PATH)/proprietary/lib/libWVStreamControlAPI_L3.so:system/lib/libWVStreamControlAPI_L3.so \
+    $(LOCAL_PATH)/proprietary/lib/drm/libdrmwvmplugin.so:system/lib/drm/libdrmwvmplugin.so
 
 # Display
 PRODUCT_COPY_FILES += \
@@ -180,14 +186,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/libsterc.so:system/lib/libsterc.so \
     $(LOCAL_PATH)/proprietary/lib/libtee.so:system/lib/libtee.so \
     $(LOCAL_PATH)/proprietary/lib/libtrace.so:system/lib/libtrace.so \
-    $(LOCAL_PATH)/system/lib/libstagefright_ste_aacdec.so:system/lib/libstagefright_ste_aacdec.so \
-    $(LOCAL_PATH)/system/lib/libstagefright_ste_mp3decode.so:system/lib/libstagefright_ste_mp3decode.so \
-    $(LOCAL_PATH)/system/lib/libstagefright_soft_ste_aacdec.so:system/lib/libstagefright_soft_ste_aacdec.so \
-    $(LOCAL_PATH)/system/lib/libstagefright_soft_ste_mp3dec.so:system/lib/libstagefright_soft_ste_mp3dec.so \
-    $(LOCAL_PATH)/system/lib/libstagefright_ste_aacdec.so:system/lib/ste_omxcomponents/libstagefright_ste_aacdec.so \
-    $(LOCAL_PATH)/system/lib/libstagefright_ste_mp3decode.so:system/lib/ste_omxcomponents/libstagefright_ste_mp3decode.so \
-    $(LOCAL_PATH)/system/lib/libstagefright_soft_ste_aacdec.so:system/lib/ste_omxcomponents/libstagefright_soft_ste_aacdec.so \
-    $(LOCAL_PATH)/system/lib/libstagefright_soft_ste_mp3dec.so:system/lib/ste_omxcomponents/libstagefright_soft_ste_mp3dec.so
+    $(LOCAL_PATH)/proprietary/lib/libstagefright_ste_aacdec.so:proprietary/lib/libstagefright_ste_aacdec.so \
+    $(LOCAL_PATH)/proprietary/lib/libstagefright_ste_mp3decode.so:proprietary/lib/libstagefright_ste_mp3decode.so \
+    $(LOCAL_PATH)/proprietary/lib/libstagefright_soft_ste_aacdec.so:proprietary/lib/libstagefright_soft_ste_aacdec.so \
+    $(LOCAL_PATH)/proprietary/lib/libstagefright_soft_ste_mp3dec.so:proprietary/lib/libstagefright_soft_ste_mp3dec.so \
+    $(LOCAL_PATH)/proprietary/lib/libstagefright_ste_aacdec.so:system/lib/ste_omxcomponents/libstagefright_ste_aacdec.so \
+    $(LOCAL_PATH)/proprietary/lib/libstagefright_ste_mp3decode.so:system/lib/ste_omxcomponents/libstagefright_ste_mp3decode.so \
+    $(LOCAL_PATH)/proprietary/lib/libstagefright_soft_ste_aacdec.so:system/lib/ste_omxcomponents/libstagefright_soft_ste_aacdec.so \
+    $(LOCAL_PATH)/proprietary/lib/libstagefright_soft_ste_mp3dec.so:system/lib/ste_omxcomponents/libstagefright_soft_ste_mp3dec.so
 
 # System STE Configs
 PRODUCT_COPY_FILES += \
@@ -210,7 +216,7 @@ PRODUCT_COPY_FILES += \
 # OMX
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/libnmftimer.so:system/lib/libnmftimer.so \
-    $(LOCAL_PATH)/proprietary/lib/libstagefrighthw.so:system/lib/libstagefrighthw.so \
+    $(LOCAL_PATH)/proprietary/lib/libstagefrighthw.so:proprietary/lib/libstagefrighthw.so \
     $(LOCAL_PATH)/proprietary/lib/ppp_sterc.so:system/lib/ppp_sterc.so \
     $(LOCAL_PATH)/proprietary/lib/libste_ens_image_tuningdatabase.so:system/lib/libste_ens_image_tuningdatabase.so \
     $(LOCAL_PATH)/proprietary/lib/libste_ens_video_common.so:system/lib/libste_ens_video_common.so \
